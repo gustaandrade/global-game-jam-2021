@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class FocusedPanelController : MonoBehaviour
 {
-  [Header("Public References")]
-  public List<FocusedPanelType> PanelStates;
+  private List<FocusedPanelType> _panelStates;
 
   private void Awake()
   {
-    PanelStates = new List<FocusedPanelType>();
+    _panelStates = new List<FocusedPanelType>();
+    _panelStates = GetComponentsInChildren<FocusedPanelType>().ToList();
   }
 
-  private void ChangeToState(FocusedPanel nextPanel)
+  public void ChangeToState(FocusedPanel nextPanel)
   {
-    PanelStates.ForEach(ps => ps.gameObject.SetActive(false));
+    _panelStates.ForEach
+        (ps => ps.transform.GetComponentInChildren<Image>().enabled = false);
 
     if (nextPanel != FocusedPanel.Off)
-      PanelStates.FirstOrDefault(ps => ps.PanelType == nextPanel).gameObject.SetActive(true);
+      _panelStates.FirstOrDefault(ps => ps.PanelType == nextPanel)
+        .transform.GetComponentInChildren<Image>().enabled = true;
   }
 }
 

@@ -1396,6 +1396,7 @@ GameObject:
   - component: {fileID: 6057811030071247887}
   - component: {fileID: 3975141445452925239}
   - component: {fileID: 411842255771120540}
+  - component: {fileID: 1010322120}
   m_Layer: 5
   m_Name: FocusedPanel
   m_TagString: Untagged
@@ -1462,6 +1463,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1010322120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879359852465312564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37527b874dcbfb6ffb5ddd9efca0f6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelStates:
+  - {fileID: 7867479303372794895}
+  - {fileID: 1562566301967983635}
+  - {fileID: 5534136016344226656}
 --- !u!1 &4972502877645992941
 GameObject:
   m_ObjectHideFlags: 0

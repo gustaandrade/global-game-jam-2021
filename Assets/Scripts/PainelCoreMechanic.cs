@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PainelCoreMechanic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Sprite a Modificar")]
+    public SpriteRenderer eyes;
 
-    // Update is called once per frame
-    void Update()
+    [Header("Ciclo de Sprites")]
+    public List<Sprite> options = new List<Sprite>();
+
+    private int currentOption = 0;
+
+    public void NextOption()
     {
-        
+        currentOption++;
+        if(currentOption >= options.Count)
+        {
+            currentOption = 0; //Resetar a lista
+        }
+        eyes.sprite = options[currentOption];
     }
 }

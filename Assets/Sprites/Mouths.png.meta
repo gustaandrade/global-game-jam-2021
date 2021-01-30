@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8643589701423393501
-    second: 0
+    second: 9
   - first:
       213: 5503971591463607321
-    second: 1
+    second: 9
   - first:
       213: 3443975482307018304
-    second: 2
+    second: 9
   - first:
       213: -5697861152728114256
-    second: 3
+    second: 9
   - first:
       213: 1740232637061040629
-    second: 4
+    second: 9
   - first:
       213: 3710458742893500529
-    second: 5
+    second: 9
   - first:
       213: 6579866549825721610
-    second: 6
+    second: 9
   - first:
       213: 8421124778304631519
-    second: 7
+    second: 9
   - first:
       213: 2436214698886768319
-    second: 8
+    second: 9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -138,7 +138,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 0
+      name: 1
       rect:
         serializedVersion: 2
         x: 241
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1
+      name: 2
       rect:
         serializedVersion: 2
         x: 1082
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2
+      name: 3
       rect:
         serializedVersion: 2
         x: 1855
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3
+      name: 4
       rect:
         serializedVersion: 2
         x: 236
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4
+      name: 5
       rect:
         serializedVersion: 2
         x: 1071
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5
+      name: 6
       rect:
         serializedVersion: 2
         x: 1871
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6
+      name: 7
       rect:
         serializedVersion: 2
         x: 248
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 7
+      name: 8
       rect:
         serializedVersion: 2
         x: 1063
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8
+      name: 9
       rect:
         serializedVersion: 2
         x: 1820

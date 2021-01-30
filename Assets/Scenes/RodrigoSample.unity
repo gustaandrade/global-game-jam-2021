@@ -491,12 +491,12 @@ MonoBehaviour:
   eyes: {fileID: 1845115780}
   options:
   - {fileID: 0}
+  - {fileID: -2374222918679686493, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
+  - {fileID: -761933863725385812, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
+  - {fileID: -5906598218874874896, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
+  - {fileID: -1816755548282093316, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
+  - {fileID: 2008176328888099268, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
   - {fileID: 7592757925641637919, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
-  - {fileID: -4571517682146944559, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
-  - {fileID: 2516536092415380688, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
-  - {fileID: -5298061473243679785, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
-  - {fileID: -2761140920480121960, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
-  - {fileID: -108941262727892990, guid: 35689a4dcbe480541b916404d92eecb3, type: 3}
   currentOption: 0
 --- !u!1 &327131713
 GameObject:
@@ -1633,15 +1633,15 @@ MonoBehaviour:
   eyes: {fileID: 1258531285}
   options:
   - {fileID: 0}
+  - {fileID: -2374222918679686493, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
+  - {fileID: -761933863725385812, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
+  - {fileID: -5906598218874874896, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
+  - {fileID: -1816755548282093316, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
+  - {fileID: 2008176328888099268, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
+  - {fileID: 6967745887157389618, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
+  - {fileID: 6501298950303736333, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
+  - {fileID: -3181606171480048652, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
   - {fileID: 8643589701423393501, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: 5503971591463607321, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: 3443975482307018304, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: -5697861152728114256, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: 1740232637061040629, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: 3710458742893500529, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: 6579866549825721610, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: 8421124778304631519, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
-  - {fileID: 2436214698886768319, guid: 86f66b2d5d62ee64cb7f2b40a2e7b72a, type: 3}
   currentOption: 0
 --- !u!1 &1199359247
 GameObject:
@@ -1742,7 +1742,7 @@ MonoBehaviour:
     isActive: 0
     dialog: Estou procurando uma pessoa que vi, com olhos pequenos e de lingua pra
       fora.
-    faceCharacteristics: 000000000000000000000000
+    faceCharacteristics: 020000000400000009000000
   game: {fileID: 2124693968}
   dialogWindow: {fileID: 961304287}
   dialogText: {fileID: 1355924031}

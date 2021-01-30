@@ -5,7 +5,7 @@ using UnityEngine;
 public class example : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
     }

@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Request : MonoBehaviour
+[System.Serializable]
+public class Request
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool isActive;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string dialog;
+    public int[] faceCharacteristics;
 }

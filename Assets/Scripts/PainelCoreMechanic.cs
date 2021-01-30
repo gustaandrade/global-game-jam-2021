@@ -10,7 +10,7 @@ public class PainelCoreMechanic : MonoBehaviour
     [Header("Ciclo de Sprites")]
     public List<Sprite> options = new List<Sprite>();
 
-    private int currentOption = 0;
+    public int currentOption = 0;
 
     public void NextOption()
     {

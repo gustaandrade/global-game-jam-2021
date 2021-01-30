@@ -337,42 +337,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 140792110, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268286012, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268286014, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342585554, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1470566977, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1470566979, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1816898874, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1816898876, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2140721597, guid: 5f58310d819b0ed7d8ba9f5e601387d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4972502877645992848, guid: 5f58310d819b0ed7d8ba9f5e601387d3,
         type: 3}
       propertyPath: m_Camera

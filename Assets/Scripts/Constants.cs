@@ -138,6 +138,7 @@ public static class Constants
   };
 }
 
+[System.Serializable]
 public enum FaceFeature
 {
   Head = 1,

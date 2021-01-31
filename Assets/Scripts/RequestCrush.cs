@@ -108,6 +108,6 @@ public class RequestCrush : MonoBehaviour
       }
     });
 
-    return faceStringBuilder.ToString();
+    return faceStringBuilder.Append(".").ToString();
   }
 }

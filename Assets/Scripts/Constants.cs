@@ -2,6 +2,18 @@
 
 public static class Constants
 {
+  public static List<FaceFeature> AllFaceFeatures = new List<FaceFeature> {
+    FaceFeature.Head,
+    FaceFeature.Hair,
+    FaceFeature.Eyebrows,
+    FaceFeature.Eyes,
+    FaceFeature.Nose,
+    FaceFeature.Mouth,
+    FaceFeature.Detail,
+    FaceFeature.Beard,
+    FaceFeature.SkinTone,
+  };
+
   public static List<string> RequestBaseTexts = new List<string> {
       "My crush has",
   };
@@ -46,7 +58,7 @@ public static class Constants
   public static List<string> RequestEyesColorTexts = new List<string> {
     "brown eyes",
     "black eyes",
-    "blonde blue",
+    "blonde eyes",
     "green eyes",
     "gray eyes",
   };
@@ -93,11 +105,24 @@ public static class Constants
   };
 
   public static List<string> RequestIntroBaseTexts = new List<string> {
-      "Hi there, can you help me?",
-      "Is this the Crush Booth™?",
-      "Help me! I have a subway crush!",
-      "It's an emergency! A love emergency!",
-      "GIBE CRUSH PLS",
-      "Are you the one who makes the sketches?",
+    "Hi there, can you help me?",
+    "Is this the Crush Booth™?",
+    "Help me! I have a subway crush!",
+    "It's an emergency! A love emergency!",
+    "GIBE CRUSH PLS",
+    "Are you the one who makes the sketches?",
   };
+}
+
+public enum FaceFeature
+{
+  Head = 1,
+  Hair = 2,
+  Eyebrows = 3,
+  Eyes = 4,
+  Nose = 5,
+  Mouth = 6,
+  Detail = 7,
+  Beard = 8,
+  SkinTone = 9
 }

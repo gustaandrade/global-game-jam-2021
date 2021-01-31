@@ -299,6 +299,7 @@ MonoBehaviour:
   RequestText: {fileID: 231375474}
   RequestButton: {fileID: 2135672514}
   MyCrushFeatures: 
+  MyCrushFeaturesDetailed: []
 --- !u!1 &622577134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,6 +2271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2140721598}
   - component: {fileID: 7867479303372794895}
+  - component: {fileID: 1637245716}
   m_Layer: 5
   m_Name: Computer
   m_TagString: Untagged
@@ -2312,6 +2314,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelType: 0
+--- !u!114 &1637245716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140721597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbdbc0f322d46bbc4b44892f6b6e707b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeadLeftButton: {fileID: 1529881555088170735}
+  HeadRightButton: {fileID: 2089766184329023307}
+  HairLeftButton: {fileID: 2089766185253463144}
+  HairRightButton: {fileID: 2089766184886479213}
+  EyebrowsLeftButton: {fileID: 2089766184072377243}
+  EyebrowsRightButton: {fileID: 2089766184736178477}
+  EyesLeftButton: {fileID: 2089766185113604620}
+  EyesRightButton: {fileID: 2089766183197616377}
+  NoseLeftButton: {fileID: 2089766183716587019}
+  NoseRightButton: {fileID: 2089766184586238530}
+  MouthLeftButton: {fileID: 2089766184853576154}
+  MouthRightButton: {fileID: 2089766184724044163}
+  DetailLeftButton: {fileID: 2089766184540168340}
+  DetailRightButton: {fileID: 2089766183367866885}
+  BeardLeftButton: {fileID: 2089766184394495322}
+  BeardRightButton: {fileID: 2089766185083085233}
+  SkinToneLeftButton: {fileID: 2089766184158484573}
+  SkinToneRightButton: {fileID: 2089766184829077626}
+  PrinterButton: {fileID: 2089766183791369849}
+  MyCrushFeatures: 
 --- !u!1 &4879359852465312564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,7 +2547,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (1)
+      value: HairLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -2628,6 +2662,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502877417522248}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766185253463144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877417522248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502877442805941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2768,7 +2814,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (3)
+      value: EyesLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -2883,6 +2929,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502877565252140}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766185113604620 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877565252140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502877587341713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2893,7 +2951,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (7)
+      value: BeardRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -3023,6 +3081,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502877587341713}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766185083085233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877587341713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502877659171149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3033,7 +3103,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (1)
+      value: HairRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -3163,6 +3233,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502877659171149}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184886479213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877659171149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502877774897421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3173,7 +3255,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (2)
+      value: EyebrowsRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -3303,6 +3385,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502877774897421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184736178477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877774897421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502877779671459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3313,7 +3407,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (5)
+      value: MouthRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -3443,6 +3537,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502877779671459}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184724044163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877779671459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502877817792602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3453,7 +3559,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (8)
+      value: SkinToneRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -3583,6 +3689,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502877817792602}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184829077626 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877817792602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502877825251834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3593,7 +3711,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (5)
+      value: MouthLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -3702,6 +3820,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4007f437700ce09298600b00b374287a, type: 3}
+--- !u!114 &2089766184853576154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502877825251834}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7750776662353454451 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
@@ -3848,7 +3978,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (4)
+      value: NoseRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -3978,6 +4108,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502878092622434}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184586238530 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878092622434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502878130290868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3988,7 +4130,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (6)
+      value: DetailLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -4103,6 +4245,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502878130290868}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184540168340 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878130290868}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502878175211371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4113,7 +4267,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton
+      value: HeadRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -4243,6 +4397,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502878175211371}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184329023307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878175211371}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502878251300218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4253,7 +4419,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (7)
+      value: BeardLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -4362,6 +4528,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4007f437700ce09298600b00b374287a, type: 3}
+--- !u!114 &2089766184394495322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878251300218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7750776662795495923 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
@@ -4378,7 +4556,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (2)
+      value: EyebrowsLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -4493,6 +4671,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502878472262587}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766184072377243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878472262587}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4972502878486820989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4503,7 +4693,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (8)
+      value: SkinToneLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -4612,6 +4802,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4007f437700ce09298600b00b374287a, type: 3}
+--- !u!114 &2089766184158484573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878486820989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7750776663029769460 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
@@ -5256,6 +5458,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4007f437700ce09298600b00b374287a, type: 3}
+--- !u!114 &2089766183791369849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878711299673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7750776663270957776 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
@@ -5272,7 +5486,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (4)
+      value: NoseLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -5381,6 +5595,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4007f437700ce09298600b00b374287a, type: 3}
+--- !u!114 &2089766183716587019 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502878921860651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7750776663463967394 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
@@ -5657,7 +5883,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (6)
+      value: DetailRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -5781,6 +6007,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4007f437700ce09298600b00b374287a, type: 3}
+--- !u!114 &2089766183367866885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502879310993957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7750776663820388012 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
@@ -6057,7 +6295,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton (3)
+      value: EyesRight
       objectReference: {fileID: 0}
     - target: {fileID: 2843615856831990752, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -6187,6 +6425,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4972502879474387161}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089766183197616377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4972502879474387161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5564915781709364943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6197,7 +6447,7 @@ PrefabInstance:
     - target: {fileID: 303183255405464133, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
       propertyPath: m_Name
-      value: ChangeButton
+      value: HeadLeft
       objectReference: {fileID: 0}
     - target: {fileID: 3355651533857791113, guid: 4007f437700ce09298600b00b374287a,
         type: 3}
@@ -6312,6 +6562,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5564915781709364943}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1529881555088170735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6341550138367123488, guid: 4007f437700ce09298600b00b374287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5564915781709364943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6313505732089507686
 PrefabInstance:
   m_ObjectHideFlags: 0

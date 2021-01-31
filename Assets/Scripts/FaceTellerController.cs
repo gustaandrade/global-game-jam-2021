@@ -70,6 +70,7 @@ public class FaceTellerController : MonoBehaviour
   private void Awake()
   {
     MyCrushFeatures = new List<FaceFeature>();
+    InitializeFaceTeller();
   }
 
   private void InitializeFaceTeller()
@@ -147,6 +148,9 @@ public class FaceTellerController : MonoBehaviour
         (() => ChangeFaceFeatureIndex(FaceFeature.SkinTone, false));
     SkinToneRightButton.onClick.AddListener
         (() => ChangeFaceFeatureIndex(FaceFeature.SkinTone, true));
+
+    PrinterButton.onClick.AddListener
+        (() => DeliverFaceTellerToPerson(PersonPosition.Left));
   }
 
   private void ChangeFaceFeatureIndex(FaceFeature feature, bool goingUp)
@@ -440,5 +444,11 @@ public class FaceTellerController : MonoBehaviour
         }
       });
     }
+
+    Debug.Log("Requested items:");
+    TimerController.Instance.LeftRequestFaceFeaturesDetailed.ForEach(lff => Debug.Log(lff));
+    Debug.Log("Delivered hair items:");
+    _shuffledHair.ElementAt(_hairIndex);
+    Debug.Log($"Left Correct: {TimerController.Instance.NumberOfLeftCorrectMatches}");
   }
 }

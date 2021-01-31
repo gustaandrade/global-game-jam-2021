@@ -466,6 +466,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerController
       objectReference: {fileID: 0}
+    - target: {fileID: 6540252790725552578, guid: f78efbebba129c030b94183a71c2e0fb,
+        type: 3}
+      propertyPath: TimeForPrinterToPrint
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6831713089641962786, guid: f78efbebba129c030b94183a71c2e0fb,
         type: 3}
       propertyPath: m_RootOrder

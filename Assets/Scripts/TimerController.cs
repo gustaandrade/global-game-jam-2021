@@ -12,7 +12,7 @@ public class TimerController : MonoBehaviour
   [Header("Public Variables")]
   public float CurrentGlobalTimer;
   public float CurrentPrinterTimer;
-  public float TimeForPrinterToPrint = 50f;
+  public float TimeForPrinterToPrint = 5f;
   public bool IsPrinterPrinting;
   public int NumberOfLeftCorrectMatches = 0;
   public int NumberOfRightCorrectMatches = 0;

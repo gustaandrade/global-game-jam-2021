@@ -448,7 +448,9 @@ public class FaceTellerController : MonoBehaviour
     Debug.Log("Requested items:");
     TimerController.Instance.LeftRequestFaceFeaturesDetailed.ForEach(lff => Debug.Log(lff));
     Debug.Log("Delivered hair items:");
-    _shuffledHair.ElementAt(_hairIndex);
+    Debug.Log(_shuffledSkinTone.ElementAt(_skinToneIndex));
     Debug.Log($"Left Correct: {TimerController.Instance.NumberOfLeftCorrectMatches}");
+
+    TimerController.Instance.ResetCorrectNumbers();
   }
 }

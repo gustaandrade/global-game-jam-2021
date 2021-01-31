@@ -41,6 +41,9 @@ public class TimerController : MonoBehaviour
 
   public List<FaceFeature> RequestNextCrushFeatures(PersonPosition position)
   {
+    NumberOfLeftCorrectMatches = 0;
+    NumberOfRightCorrectMatches = 0;
+
     var tempList = Constants.AllFaceFeatures;
     if (position == PersonPosition.Left)
     {

@@ -13,7 +13,8 @@ public class TimerController : MonoBehaviour
   public float CurrentGlobalTimer;
   public float CurrentPrinterTimer;
   public float TimeForPrinterToPrint = 5f;
-  public bool IsPrinterPrinting;
+  public bool IsPrinterPrinting = false;
+  public bool IsFaceTellerAvailable = false;
   public int NumberOfLeftCorrectMatches = 0;
   public int NumberOfRightCorrectMatches = 0;
 
@@ -41,7 +42,7 @@ public class TimerController : MonoBehaviour
   {
     CurrentGlobalTimer += Time.deltaTime;
 
-    if (IsPrinterPrinting)
+    if (IsPrinterPrinting && !IsFaceTellerAvailable)
     {
       Debug.Log($"printing... {CurrentPrinterTimer}");
       CurrentPrinterTimer += Time.deltaTime;
@@ -52,6 +53,7 @@ public class TimerController : MonoBehaviour
 
         IsPrinterPrinting = false;
         CurrentPrinterTimer = 0f;
+        IsFaceTellerAvailable = true;
       }
     }
   }
@@ -94,6 +96,11 @@ public class TimerController : MonoBehaviour
   public void StartPrinting()
   {
     IsPrinterPrinting = true;
+  }
+
+  public void GrabFaceTellerFromPrinter()
+  {
+    IsFaceTellerAvailable = false;
   }
 }
 

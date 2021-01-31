@@ -51,8 +51,11 @@ public class FaceTellerController : MonoBehaviour
   public Button SkinToneRightButton;
   private int _skinToneIndex = 0;
 
-  [Header("Printer Button")]
+  [Header("Printer Objects")]
   public Button PrinterButton;
+  public Button GrabPaperFromPrinterButton;
+  public RectTransform PaperImage;
+  public Vector3 PaperImageOriginalPosition;
 
   [Header("Public Variables")]
   public List<FaceFeature> MyCrushFeatures;
@@ -71,12 +74,27 @@ public class FaceTellerController : MonoBehaviour
   {
     MyCrushFeatures = new List<FaceFeature>();
     InitializeFaceTeller();
+
+    PaperImageOriginalPosition = PaperImage.anchoredPosition;
   }
 
   private void Update()
   {
-    // Debug.Log($"printing? {TimerController.Instance.IsPrinterPrinting}");
-    PrinterButton.interactable = !TimerController.Instance.IsPrinterPrinting;
+    PrinterButton.interactable =
+        !TimerController.Instance.IsPrinterPrinting && !TimerController.Instance.IsFaceTellerAvailable;
+    GrabPaperFromPrinterButton.interactable =
+        TimerController.Instance.IsFaceTellerAvailable;
+
+    if (TimerController.Instance.IsPrinterPrinting)
+    {
+      PaperImage.anchoredPosition =
+          new Vector3(0, PaperImage.anchoredPosition.y + -TimerController.Instance.CurrentPrinterTimer / 1.5f, 0);
+    }
+    else if (!TimerController.Instance.IsPrinterPrinting &&
+            !TimerController.Instance.IsFaceTellerAvailable)
+    {
+      PaperImage.anchoredPosition = PaperImageOriginalPosition;
+    }
   }
 
   private void InitializeFaceTeller()
@@ -161,6 +179,9 @@ public class FaceTellerController : MonoBehaviour
           PrintFaceTeller();
           DeliverFaceTellerToPerson(PersonPosition.Left);
         });
+
+    GrabPaperFromPrinterButton.onClick.AddListener
+        (() => TimerController.Instance.GrabFaceTellerFromPrinter());
   }
 
   private void ChangeFaceFeatureIndex(FaceFeature feature, bool goingUp)

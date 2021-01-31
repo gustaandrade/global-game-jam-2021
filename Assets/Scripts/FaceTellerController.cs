@@ -51,8 +51,11 @@ public class FaceTellerController : MonoBehaviour
   public Button SkinToneRightButton;
   private int _skinToneIndex = 0;
 
-  [Header("Printer Button")]
+  [Header("Printer Objects")]
   public Button PrinterButton;
+  public Button GrabPaperFromPrinterButton;
+  public RectTransform PaperImage;
+  public Vector3 PaperImageOriginalPosition;
 
   [Header("Public Variables")]
   public List<FaceFeature> MyCrushFeatures;
@@ -70,6 +73,28 @@ public class FaceTellerController : MonoBehaviour
   private void Awake()
   {
     MyCrushFeatures = new List<FaceFeature>();
+    InitializeFaceTeller();
+
+    PaperImageOriginalPosition = PaperImage.anchoredPosition;
+  }
+
+  private void Update()
+  {
+    PrinterButton.interactable =
+        !TimerController.Instance.IsPrinterPrinting && !TimerController.Instance.IsFaceTellerAvailable;
+    GrabPaperFromPrinterButton.interactable =
+        TimerController.Instance.IsFaceTellerAvailable;
+
+    if (TimerController.Instance.IsPrinterPrinting)
+    {
+      PaperImage.anchoredPosition =
+          new Vector3(0, PaperImage.anchoredPosition.y + -TimerController.Instance.CurrentPrinterTimer / 1.5f, 0);
+    }
+    else if (!TimerController.Instance.IsPrinterPrinting &&
+            !TimerController.Instance.IsFaceTellerAvailable)
+    {
+      PaperImage.anchoredPosition = PaperImageOriginalPosition;
+    }
   }
 
   private void InitializeFaceTeller()
@@ -147,6 +172,16 @@ public class FaceTellerController : MonoBehaviour
         (() => ChangeFaceFeatureIndex(FaceFeature.SkinTone, false));
     SkinToneRightButton.onClick.AddListener
         (() => ChangeFaceFeatureIndex(FaceFeature.SkinTone, true));
+
+    PrinterButton.onClick.AddListener
+        (() =>
+        {
+          PrintFaceTeller();
+          DeliverFaceTellerToPerson(PersonPosition.Left);
+        });
+
+    GrabPaperFromPrinterButton.onClick.AddListener
+        (() => TimerController.Instance.GrabFaceTellerFromPrinter());
   }
 
   private void ChangeFaceFeatureIndex(FaceFeature feature, bool goingUp)
@@ -310,6 +345,12 @@ public class FaceTellerController : MonoBehaviour
     }
   }
 
+  private void PrintFaceTeller()
+  {
+    TimerController.Instance.StartPrinting();
+    PrinterButton.interactable = false;
+  }
+
   private void DeliverFaceTellerToPerson(PersonPosition person)
   {
     if (person == PersonPosition.Left)
@@ -440,5 +481,13 @@ public class FaceTellerController : MonoBehaviour
         }
       });
     }
+
+    Debug.Log("Requested items:");
+    TimerController.Instance.LeftRequestFaceFeaturesDetailed.ForEach(lff => Debug.Log(lff));
+    Debug.Log("Delivered hair items:");
+    Debug.Log(_shuffledSkinTone.ElementAt(_skinToneIndex));
+    Debug.Log($"Left Correct: {TimerController.Instance.NumberOfLeftCorrectMatches}");
+
+    TimerController.Instance.ResetCorrectNumbers();
   }
 }

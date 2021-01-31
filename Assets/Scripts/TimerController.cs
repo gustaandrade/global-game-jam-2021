@@ -11,6 +11,10 @@ public class TimerController : MonoBehaviour
 
   [Header("Public Variables")]
   public float CurrentGlobalTimer;
+  public float CurrentPrinterTimer;
+  public float TimeForPrinterToPrint = 5f;
+  public bool IsPrinterPrinting = false;
+  public bool IsFaceTellerAvailable = false;
   public int NumberOfLeftCorrectMatches = 0;
   public int NumberOfRightCorrectMatches = 0;
 
@@ -37,10 +41,27 @@ public class TimerController : MonoBehaviour
   private void Update()
   {
     CurrentGlobalTimer += Time.deltaTime;
+
+    if (IsPrinterPrinting && !IsFaceTellerAvailable)
+    {
+      Debug.Log($"printing... {CurrentPrinterTimer}");
+      CurrentPrinterTimer += Time.deltaTime;
+
+      if (CurrentPrinterTimer >= TimeForPrinterToPrint)
+      {
+        Debug.Log($"done... {CurrentPrinterTimer}");
+
+        IsPrinterPrinting = false;
+        CurrentPrinterTimer = 0f;
+        IsFaceTellerAvailable = true;
+      }
+    }
   }
 
   public List<FaceFeature> RequestNextCrushFeatures(PersonPosition position)
   {
+    ResetCorrectNumbers();
+
     var tempList = Constants.AllFaceFeatures;
     if (position == PersonPosition.Left)
     {
@@ -64,6 +85,22 @@ public class TimerController : MonoBehaviour
     {
       RightRequestFaceFeaturesDetailed = detailsList;
     }
+  }
+
+  public void ResetCorrectNumbers()
+  {
+    NumberOfLeftCorrectMatches = 0;
+    NumberOfRightCorrectMatches = 0;
+  }
+
+  public void StartPrinting()
+  {
+    IsPrinterPrinting = true;
+  }
+
+  public void GrabFaceTellerFromPrinter()
+  {
+    IsFaceTellerAvailable = false;
   }
 }
 

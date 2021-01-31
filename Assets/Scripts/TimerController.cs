@@ -33,7 +33,7 @@ public class TimerController : MonoBehaviour
   public List<FaceFeature> RequestNextCrushFeatures()
   {
     var tempList = Constants.AllFaceFeatures;
-    return tempList.Shuffle().Take(FeaturesToShuffle).ToList();
+    return tempList.Shuffle().Take(FeaturesToShuffle).OrderBy(ff => (int)ff).ToList();
   }
 }
 

@@ -73,6 +73,12 @@ public class FaceTellerController : MonoBehaviour
     InitializeFaceTeller();
   }
 
+  private void Update()
+  {
+    // Debug.Log($"printing? {TimerController.Instance.IsPrinterPrinting}");
+    PrinterButton.interactable = !TimerController.Instance.IsPrinterPrinting;
+  }
+
   private void InitializeFaceTeller()
   {
     _shuffledHead = new List<string>();
@@ -150,7 +156,11 @@ public class FaceTellerController : MonoBehaviour
         (() => ChangeFaceFeatureIndex(FaceFeature.SkinTone, true));
 
     PrinterButton.onClick.AddListener
-        (() => DeliverFaceTellerToPerson(PersonPosition.Left));
+        (() =>
+        {
+          PrintFaceTeller();
+          DeliverFaceTellerToPerson(PersonPosition.Left);
+        });
   }
 
   private void ChangeFaceFeatureIndex(FaceFeature feature, bool goingUp)
@@ -312,6 +322,12 @@ public class FaceTellerController : MonoBehaviour
 
       default: break;
     }
+  }
+
+  private void PrintFaceTeller()
+  {
+    TimerController.Instance.StartPrinting();
+    PrinterButton.interactable = false;
   }
 
   private void DeliverFaceTellerToPerson(PersonPosition person)

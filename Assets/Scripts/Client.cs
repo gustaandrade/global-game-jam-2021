@@ -3,62 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class Client : MonoBehaviour
 {
-    public Request request;
-    public GameController game;
-    public GameObject dialogWindow;
-    public Text dialogText;
-    public int[] faceCod;
-    public Text requestText; //Apenas teste
+  public Request request;
+  public GameController game;
+  public GameObject dialogWindow;
+  public Text dialogText;
+  public int[] faceCod;
+  public Text requestText; //Apenas teste
 
-    public void OpenDialog()
-    {
-        request.isActive = true;
-        dialogWindow.SetActive(true);
-        dialogText.text = request.dialog;
-        requestText.text = string.Join("", request.faceCharacteristics);
-    }
+  public void OpenDialog()
+  {
+    request.isActive = true;
+    dialogWindow.SetActive(true);
+    // dialogText.text = request.dialog;
+    requestText.text = string.Join("", request.faceCharacteristics);
 
-    public bool CheckFace()
-    {
-        faceCod = game.faceCod;
-        return (string.Join("", request.faceCharacteristics) == string.Join("", faceCod));
-    }
+    dialogText.text = Constants.RequestIntroBaseTexts.Shuffle().FirstOrDefault();
+  }
 
-    public void GivePortrait()
-    {
-        if (request.isActive && game.isPrinted)
-        {
-            if (CheckFace())
-            {
-                print("Congratulations!");
-                game.isPrinted = false;
-                StartCoroutine(KillNPC());
-            }
-            else
-            {
-                print("You Lost!");
-                game.isPrinted = false;
-                StartCoroutine(RestartScene(2));
-            }
-        }
-        else
-        {
-            print("You Need to Print the Portrait!");
-        }
-    }
+  public bool CheckFace()
+  {
+    faceCod = game.faceCod;
+    return (string.Join("", request.faceCharacteristics) == string.Join("", faceCod));
+  }
 
-    private IEnumerator RestartScene(int time)
+  public void GivePortrait()
+  {
+    if (request.isActive && game.isPrinted)
     {
-        yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(0);
+      if (CheckFace())
+      {
+        print("Congratulations!");
+        game.isPrinted = false;
+        StartCoroutine(KillNPC());
+      }
+      else
+      {
+        print("You Lost!");
+        game.isPrinted = false;
+        StartCoroutine(RestartScene(2));
+      }
     }
-    private IEnumerator KillNPC()
+    else
     {
-        yield return new WaitForSeconds(1);
-        Destroy(gameObject);
+      print("You Need to Print the Portrait!");
     }
+  }
+
+  private IEnumerator RestartScene(int time)
+  {
+    yield return new WaitForSeconds(time);
+    SceneManager.LoadScene(0);
+  }
+  private IEnumerator KillNPC()
+  {
+    yield return new WaitForSeconds(1);
+    Destroy(gameObject);
+  }
 
 }

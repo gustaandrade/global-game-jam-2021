@@ -13,17 +13,20 @@ public class RequestCrush : MonoBehaviour
 
   [Header("Public Variables")]
   public List<FaceFeature> MyCrushFeatures;
+  public List<string> MyCrushFeaturesDetailed;
 
   private void Awake()
   {
     MyCrushFeatures = new List<FaceFeature>();
+    MyCrushFeaturesDetailed = new List<string>();
 
     RequestButton.onClick.AddListener(RequestMyCrush);
   }
 
   private void RequestMyCrush()
   {
-    MyCrushFeatures = TimerController.Instance.RequestNextCrushFeatures();
+    //TODO: DETERMINE POSITION
+    MyCrushFeatures = TimerController.Instance.RequestNextCrushFeatures(PersonPosition.Left);
 
     RequestText.text =
         $"{Constants.RequestIntroBaseTexts.Shuffle().FirstOrDefault()}\n\n" +
@@ -46,57 +49,57 @@ public class RequestCrush : MonoBehaviour
       switch (ff)
       {
         case FaceFeature.Head:
-          var randomHead = Constants.RequestHeadTypeTexts.Shuffle().FirstOrDefault();
+          var randomHead = Constants.RequestHeadTexts.Shuffle().FirstOrDefault();
           faceStringBuilder.Append(randomHead);
+          MyCrushFeaturesDetailed.Add(randomHead);
           break;
 
         case FaceFeature.Hair:
-          var randomHairType = Constants.RequestHairTypeTexts.Shuffle().FirstOrDefault();
-          var randomHairColor = Constants.RequestHairColorTexts.Shuffle().FirstOrDefault();
-          faceStringBuilder.Append(randomHairType);
-          faceStringBuilder.Append(" ");
-          faceStringBuilder.Append(randomHairColor);
+          var randomHair = Constants.RequestHairTexts.Shuffle().FirstOrDefault();
+          faceStringBuilder.Append(randomHair);
+          MyCrushFeaturesDetailed.Add(randomHair);
           break;
 
         case FaceFeature.Eyebrows:
-          var randomEyebrow = Constants.RequestEyebrowTypeTexts.Shuffle().FirstOrDefault();
+          var randomEyebrow = Constants.RequestEyebrowsTexts.Shuffle().FirstOrDefault();
           faceStringBuilder.Append(randomEyebrow);
+          MyCrushFeaturesDetailed.Add(randomEyebrow);
           break;
 
         case FaceFeature.Eyes:
-          var randomEyesType = Constants.RequestEyesTypeTexts.Shuffle().FirstOrDefault();
-          var randomEyesColor = Constants.RequestEyesColorTexts.Shuffle().FirstOrDefault();
-          faceStringBuilder.Append(randomEyesType);
-          faceStringBuilder.Append(" ");
-          faceStringBuilder.Append(randomEyesColor);
+          var randomEyes = Constants.RequestEyesTexts.Shuffle().FirstOrDefault();
+          faceStringBuilder.Append(randomEyes);
+          MyCrushFeaturesDetailed.Add(randomEyes);
           break;
 
         case FaceFeature.Nose:
-          var randomNose = Constants.RequestNoseTypeTexts.Shuffle().FirstOrDefault();
+          var randomNose = Constants.RequestNoseTexts.Shuffle().FirstOrDefault();
           faceStringBuilder.Append(randomNose);
+          MyCrushFeaturesDetailed.Add(randomNose);
           break;
 
         case FaceFeature.Mouth:
-          var randomMouth = Constants.RequestMouthTypeTexts.Shuffle().FirstOrDefault();
+          var randomMouth = Constants.RequestMouthTexts.Shuffle().FirstOrDefault();
           faceStringBuilder.Append(randomMouth);
+          MyCrushFeaturesDetailed.Add(randomMouth);
           break;
 
         case FaceFeature.Detail:
-          var randomDetail = Constants.RequestDetailTypeTexts.Shuffle().FirstOrDefault();
+          var randomDetail = Constants.RequestDetailTexts.Shuffle().FirstOrDefault();
           faceStringBuilder.Append(randomDetail);
+          MyCrushFeaturesDetailed.Add(randomDetail);
           break;
 
         case FaceFeature.Beard:
-          var randomBeardType = Constants.RequestBeardTypeTexts.Shuffle().FirstOrDefault();
-          var randomBeardColor = Constants.RequestBeardColorTexts.Shuffle().FirstOrDefault();
-          faceStringBuilder.Append(randomBeardType);
-          faceStringBuilder.Append(" ");
-          faceStringBuilder.Append(randomBeardColor);
+          var randomBeard = Constants.RequestBeardTexts.Shuffle().FirstOrDefault();
+          faceStringBuilder.Append(randomBeard);
+          MyCrushFeaturesDetailed.Add(randomBeard);
           break;
 
         case FaceFeature.SkinTone:
-          var randomSkinTone = Constants.RequestSkinToneTypeTexts.Shuffle().FirstOrDefault();
+          var randomSkinTone = Constants.RequestSkinToneTexts.Shuffle().FirstOrDefault();
           faceStringBuilder.Append(randomSkinTone);
+          MyCrushFeaturesDetailed.Add(randomSkinTone);
           break;
 
         default: break;
@@ -107,6 +110,8 @@ public class RequestCrush : MonoBehaviour
         faceStringBuilder.Append(", ");
       }
     });
+
+    TimerController.Instance.RecordCrushFeaturesDetailed(MyCrushFeaturesDetailed, PersonPosition.Left);
 
     return faceStringBuilder.Append(".").ToString();
   }

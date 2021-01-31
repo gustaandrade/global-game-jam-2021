@@ -11,18 +11,27 @@ public class TimerController : MonoBehaviour
 
   [Header("Public Variables")]
   public float CurrentGlobalTimer;
+  public int NumberOfLeftCorrectMatches = 0;
+  public int NumberOfRightCorrectMatches = 0;
+
 
   [Range(4, 9)]
   public int FeaturesToShuffle = 4;
 
-  public List<FaceFeature> ShuffledFaceFeatures;
+  [Header("Requested Crushes")]
+  public List<FaceFeature> LeftRequestFaceFeatures;
+  public List<FaceFeature> RightRequestFaceFeatures;
+
+  public List<string> LeftRequestFaceFeaturesDetailed;
+  public List<string> RightRequestFaceFeaturesDetailed;
 
   private void Awake()
   {
     if (Instance == null)
       Instance = this;
 
-    ShuffledFaceFeatures = new List<FaceFeature>();
+    LeftRequestFaceFeatures = new List<FaceFeature>();
+    RightRequestFaceFeatures = new List<FaceFeature>();
   }
 
   private void Update()
@@ -30,10 +39,36 @@ public class TimerController : MonoBehaviour
     CurrentGlobalTimer += Time.deltaTime;
   }
 
-  public List<FaceFeature> RequestNextCrushFeatures()
+  public List<FaceFeature> RequestNextCrushFeatures(PersonPosition position)
   {
     var tempList = Constants.AllFaceFeatures;
-    return tempList.Shuffle().Take(FeaturesToShuffle).OrderBy(ff => (int)ff).ToList();
+    if (position == PersonPosition.Left)
+    {
+      LeftRequestFaceFeatures = tempList.Shuffle().Take(FeaturesToShuffle).OrderBy(ff => (int)ff).ToList();
+      return LeftRequestFaceFeatures;
+    }
+    else
+    {
+      RightRequestFaceFeatures = tempList.Shuffle().Take(FeaturesToShuffle).OrderBy(ff => (int)ff).ToList();
+      return RightRequestFaceFeatures;
+    }
+  }
+
+  public void RecordCrushFeaturesDetailed(List<string> detailsList, PersonPosition position)
+  {
+    if (position == PersonPosition.Left)
+    {
+      LeftRequestFaceFeaturesDetailed = detailsList;
+    }
+    else
+    {
+      RightRequestFaceFeaturesDetailed = detailsList;
+    }
   }
 }
 
+public enum PersonPosition
+{
+  Left,
+  Right
+}

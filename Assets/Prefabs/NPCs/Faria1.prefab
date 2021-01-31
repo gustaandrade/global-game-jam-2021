@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4645227867376518018}
   - component: {fileID: 4645227867376518019}
   - component: {fileID: -893884814420132715}
+  - component: {fileID: -1209966116143278374}
   m_Layer: 10
   m_Name: Faria1
   m_TagString: NPC
@@ -116,5 +117,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2947696001787924181, guid: 83f95299aab0ab647a984685a172bf94, type: 3}
-  speed: 0
+  speed: 1
   hasArrived: 0
+--- !u!61 &-1209966116143278374
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645227867376518020}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.050981283, y: 0.62198055}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.3, y: 4.5}
+    newSize: {x: 3.3, y: 4.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1172156, y: 2.5626829}
+  m_EdgeRadius: 0

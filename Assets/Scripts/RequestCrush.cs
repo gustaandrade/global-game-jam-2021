@@ -23,7 +23,7 @@ public class RequestCrush : MonoBehaviour
     RequestButton.onClick.AddListener(RequestMyCrush);
   }
 
-  private void RequestMyCrush()
+  public void RequestMyCrush()
   {
     //TODO: DETERMINE POSITION
     MyCrushFeatures = TimerController.Instance.RequestNextCrushFeatures(PersonPosition.Left);

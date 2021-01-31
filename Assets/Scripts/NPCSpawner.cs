@@ -5,8 +5,6 @@ using UnityEngine;
 public class NPCSpawner : MonoBehaviour
 {
     public List<GameObject> npc;
-    float randomX;
-    public Vector2 whereToSpawn;
     public float spawnRate = 2f;
     float nextSpawn = 0f;
     int whatToSpawn;
@@ -24,7 +22,7 @@ public class NPCSpawner : MonoBehaviour
         CountNPCs();
         if(Time.time > nextSpawn && !twoNpcsInScene)
         {
-            whatToSpawn = Random.Range(0, npc.Count);     
+            whatToSpawn = Random.Range(0, npc.Count); //0,npc.Count     
             print(whatToSpawn);
             
             switch (whatToSpawn)
